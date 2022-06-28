@@ -8,7 +8,7 @@ Add repository:
 ```bash
 brew tap meoconbatu/tools
 ```
-Install diffdecoding:
+Install [diffdecoding](https://github.com/meoconbatu/diffdecoding):
 ```bash
 brew install diffdecoding
 ```
