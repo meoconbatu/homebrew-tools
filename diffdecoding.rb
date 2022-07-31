@@ -5,20 +5,20 @@
 class Diffdecoding < Formula
   desc ""
   homepage "https://github.com/meoconbatu/homebrew-tools"
-  version "1.0.0"
+  version "1.1.0"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/meoconbatu/diffdecoding/releases/download/v1.0.0/diffdecoding_1.0.0_Darwin_arm64.tar.gz"
-      sha256 "b4a51cd751cd986d186e05146180a006fcd061e9fd07dc28b0fbed37610064b5"
+    if Hardware::CPU.intel?
+      url "https://github.com/meoconbatu/diffdecoding/releases/download/1.1.0/diffdecoding_1.1.0_Darwin_x86_64.tar.gz"
+      sha256 "f6e2d364b88b0240861909f371d84fb8db3e59bfb72c1883ee4ba415fbe55e4c"
 
       def install
         bin.install "diffdecoding"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/meoconbatu/diffdecoding/releases/download/v1.0.0/diffdecoding_1.0.0_Darwin_x86_64.tar.gz"
-      sha256 "66cddff83140a2c62d2bb5c66bb592418cb94c83f41b5b491700a40850d58919"
+    if Hardware::CPU.arm?
+      url "https://github.com/meoconbatu/diffdecoding/releases/download/1.1.0/diffdecoding_1.1.0_Darwin_arm64.tar.gz"
+      sha256 "67f39194938653054b1b222fe936b8c29cf928572befa95e6397f63041dee2ea"
 
       def install
         bin.install "diffdecoding"
@@ -27,17 +27,17 @@ class Diffdecoding < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/meoconbatu/diffdecoding/releases/download/v1.0.0/diffdecoding_1.0.0_Linux_x86_64.tar.gz"
-      sha256 "98decb46987ed32c89d76ba5db984e88098bfd0ef7d4e7c88449a7d37921dc37"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/meoconbatu/diffdecoding/releases/download/1.1.0/diffdecoding_1.1.0_Linux_arm64.tar.gz"
+      sha256 "487cc0fb246cec201e1f4e354224f94a9d1527437e5a1722e5216bbc0fa2d769"
 
       def install
         bin.install "diffdecoding"
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/meoconbatu/diffdecoding/releases/download/v1.0.0/diffdecoding_1.0.0_Linux_arm64.tar.gz"
-      sha256 "dc38d2a59ba708d256c7694e839752e825a92ea607c5b273dd266bd5df82fbcc"
+    if Hardware::CPU.intel?
+      url "https://github.com/meoconbatu/diffdecoding/releases/download/1.1.0/diffdecoding_1.1.0_Linux_x86_64.tar.gz"
+      sha256 "95da7ea86c1e976fe9962ba4616bc69b54efb78f415db7a883edb8d5eed7e18d"
 
       def install
         bin.install "diffdecoding"
