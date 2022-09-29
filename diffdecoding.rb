@@ -5,20 +5,20 @@
 class Diffdecoding < Formula
   desc ""
   homepage "https://github.com/meoconbatu/homebrew-tools"
-  version "1.1.0"
+  version "1.1.1"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/meoconbatu/diffdecoding/releases/download/1.1.0/diffdecoding_1.1.0_Darwin_x86_64.tar.gz"
-      sha256 "f6e2d364b88b0240861909f371d84fb8db3e59bfb72c1883ee4ba415fbe55e4c"
+      url "https://github.com/meoconbatu/diffdecoding/releases/download/1.1.1/diffdecoding_1.1.1_Darwin_x86_64.tar.gz"
+      sha256 "993fa0e354e43beb96d7dd6a87d597f4e056e9bdba494a1d88b2e34e86ac2379"
 
       def install
         bin.install "diffdecoding"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/meoconbatu/diffdecoding/releases/download/1.1.0/diffdecoding_1.1.0_Darwin_arm64.tar.gz"
-      sha256 "67f39194938653054b1b222fe936b8c29cf928572befa95e6397f63041dee2ea"
+      url "https://github.com/meoconbatu/diffdecoding/releases/download/1.1.1/diffdecoding_1.1.1_Darwin_arm64.tar.gz"
+      sha256 "2465d7dc35200164b81d9562b6ec41919a757103ddd8d5b0c40d422865f7cc1a"
 
       def install
         bin.install "diffdecoding"
@@ -28,16 +28,16 @@ class Diffdecoding < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/meoconbatu/diffdecoding/releases/download/1.1.0/diffdecoding_1.1.0_Linux_arm64.tar.gz"
-      sha256 "487cc0fb246cec201e1f4e354224f94a9d1527437e5a1722e5216bbc0fa2d769"
+      url "https://github.com/meoconbatu/diffdecoding/releases/download/1.1.1/diffdecoding_1.1.1_Linux_arm64.tar.gz"
+      sha256 "fdf427e243d10ae2e775583d1952d0d3b7d8d929b11e24e2fb5b516a87f247e7"
 
       def install
         bin.install "diffdecoding"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/meoconbatu/diffdecoding/releases/download/1.1.0/diffdecoding_1.1.0_Linux_x86_64.tar.gz"
-      sha256 "95da7ea86c1e976fe9962ba4616bc69b54efb78f415db7a883edb8d5eed7e18d"
+      url "https://github.com/meoconbatu/diffdecoding/releases/download/1.1.1/diffdecoding_1.1.1_Linux_x86_64.tar.gz"
+      sha256 "eb541f28607a7379439312e7c55be8a9bfadb68bf83204d4c31a5ce23697f558"
 
       def install
         bin.install "diffdecoding"
